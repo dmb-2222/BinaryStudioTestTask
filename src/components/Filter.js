@@ -8,6 +8,7 @@ export default function Filter({ value, onChangeFilter }) {
         className="TaskEditor-input"
         value={value}
         onChange={e => onChangeFilter(e.target.value)}
+        placeholder="Поиск рецепта"
       />
     </div>
   );

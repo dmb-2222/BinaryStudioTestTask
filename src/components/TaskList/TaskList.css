@@ -25,6 +25,8 @@
   margin-bottom: 0;
   margin-right: 16px;
   border-radius: 3px;
+  border-bottom: 2px dashed #000080;
+  cursor: pointer;
 }
 
 .TaskList-actions {

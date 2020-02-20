@@ -14,17 +14,15 @@ export default class TaskEditor extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-
     this.props.onAddTask(this.state.text);
-
     this.setState({ text: '' });
   };
-
+  
   render() {
     return (
       <form className="TaskEditor" onSubmit={this.handleSubmit}>
         <label className="TaskEditor-label">
-          Text
+          Ваш рецепт
           <input
             className="TaskEditor-input"
             type="text"
@@ -34,7 +32,7 @@ export default class TaskEditor extends Component {
         </label>
 
         <button type="submit" className="TaskEditor-button">
-          Добавить заметку
+          Добавить рецепт
         </button>
       </form>
     );
