@@ -4,7 +4,7 @@ const TaskListItem = ({
   completed,
   onRemove,
   onUpdate,
-  onUpdateText,
+  onUpdateText
 }) => {
   const clx = ["TaskList-item"];
 
@@ -13,8 +13,13 @@ const TaskListItem = ({
   }
   return (
     <li className={clx.join(" ")}>
-      
-      <p className="TaskList-text" onDoubleClick={onUpdateText}>{text}</p>
+      <p
+        title="DobleClick to change"
+        className="TaskList-text"
+        onDoubleClick={onUpdateText}
+      >
+        {text}
+      </p>
       <label>
         <input type="checkbox" checked={completed} onChange={onUpdate} />
         Completed
@@ -24,7 +29,6 @@ const TaskListItem = ({
         <button type="button" className="TaskList-button" onClick={onRemove}>
           Del
         </button>
-
       </section>
     </li>
   );
